@@ -1,0 +1,1 @@
+var personalWebsite = angular.module('personalWebsite', ['ngRoute', 'ngResource']);

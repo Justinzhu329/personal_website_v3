@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en" ng-app="personalWebsite">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -13,6 +13,11 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.1/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.1/angular-route.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.1/angular-resource.js"></script>
+        <script src="js/angularmodule.js"></script>
+        <script src="js/route.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -20,7 +25,22 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <header class="mainheader">
+            <section>
+                <a href="#"><h1>Justin Zhu<span>Front-End Developer</span></h1></a>
+                <a href=""><div id="menubar" class="menubar"></div></a>
+            </section>
+            <nav class="display main-navigation">
+                <ul class="liststyle">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Projects</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div ng-view></div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>

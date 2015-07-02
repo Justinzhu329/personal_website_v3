@@ -97,6 +97,111 @@ textarea {
 
 
 
+/*********** HEADER & NAV STYLE ***********/
+
+.mainheader section, .main-navigation ul li {
+    padding: 5px;
+}
+.mainheader h1 {
+    margin: 0;
+    font-size: 1.5em;
+    display: inline-block;
+}
+
+.mainheader section {
+    background-color: #12F272;
+}
+
+.mainheader span {
+    font-size: .6em;
+    display: block;
+    line-height: .5;
+}
+
+.main-navigation {
+    position: fixed;
+    width: 100%;
+}
+
+.main-navigation ul {
+    margin: 0;
+    padding: 0;
+
+}
+
+.main-navigation ul li {
+    background-color: lightblue;
+}
+
+.main-navigation ul li a {
+    display: block;
+}
+
+.menubar {
+    display: inline-block;
+    position: relative;         
+    margin-top: 5px; 
+    border: 2px solid black;
+    border-radius: 2px; 
+    height: 36px; 
+    width:36px;
+    float: right;
+}
+
+#menubar:before { 
+    border-bottom: 17px double black;
+    border-top: 6px solid black;    
+    content:"";
+    height: 5px; 
+    position: absolute; 
+    right:3px;  
+    top: 4px; 
+    width:30px; 
+}
+
+/*********** HOME PAGE ***********/
+
+.home-navigation ul {
+
+}
+
+
+/*********** CLASS STYLES ***********/
+
+.display {
+    display: none;
+}
+
+.liststyle {
+    list-style: none;
+}
+
+/*********** GENERAL STYLES ***********/
+a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

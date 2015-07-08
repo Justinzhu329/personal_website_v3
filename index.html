@@ -9,7 +9,8 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-
+        <!-- Twitter Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -25,24 +26,35 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <header class="mainheader">
-            <section>
-                <a href="#"><h1>Justin Zhu<span>Front-End Developer</span></h1></a>
-                <a href=""><div id="menubar" class="menubar"></div></a>
-            </section>
-            <nav class="display main-navigation">
-                <ul class="liststyle">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Projects</a></li>
-                </ul>
-            </nav>
+        <header id="mainheader" class="mainheader">
+          <nav class="main-navigation navbar navbar-inverse" role="navigation">
+            <article class="content container">
+              <section class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><h3>Justin Zhu<span class="subhead">Front-End Developer</span></h3></a>
+              </section><!-- navbar-header -->
+              
+              <section class="collapse navbar-collapse" id="collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Projects</a></li>
+                </ul>  <!-- .nav -->
+              </section><!-- collapse navbar-collapse -->
+            </article><!-- container -->
+          </nav> <!-- nav -->
         </header>
 
-        <div ng-view></div>
+        <div class="view" ng-view></div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>

@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Dosis|Lato:300,400,400italic|Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Dosis|Lato:300,400,400italic|Open+Sans|);
 
 /*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
 
@@ -98,28 +98,27 @@ textarea {
    ========================================================================== */
 /*************** GENERAL STYLES ***************/
 
+html, body {
+  height: 100%;
+}
+
 body{
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 1.2em;
   position: relative;
   color: rgb(255,255,240);
-  background: url("../img/cinema.jpg") top center no-repeat fixed;
+  background-image: url("../img/cinema.jpg");
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: cover;
-}
-
-html, body {
-  height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  margin-bottom: 20px;
-}
-
-h2 {
-  text-align: center;
+  margin: 0;
 }
 
 /*************** ANCHOR STYLES ***************/
@@ -128,14 +127,29 @@ a:link {
     text-decoration: none;
 }
 
+/*************** UNIVERSAL STYLES ***************/
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 /*************** MAIN PAGE ***************/
+div.view {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+header.mainheader {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .3));
+}
+
 header .main-navigation {
-    margin: 0;
+  margin: 0;
 }
 
 header .navbar-header h3 {
-  margin: 0 30px;
+  margin: 0;
   color: white;
 }
 
@@ -143,8 +157,17 @@ header .navbar-brand {
   padding: 5px 0;
 }
 
+header .navbar-brand h3 {
+  text-align: left;
+}
+
+ul.nav li a {
+  text-transform: uppercase;
+}
+
 header .navbar-nav a {
-  padding: 8px 15px;
+  padding: 10px 18px;
+  font-size: 1rem;
 }
 
 header .navbar .navbar-brand .subhead {
@@ -158,7 +181,6 @@ header .navbar-nav .active {
 
 header .navbar-inverse {
     background-color: transparent;
-    border-color: none;
     border: none;
 }
 
@@ -176,123 +198,643 @@ header section ul.nav li {
     font-size: 1.2em;
 }
 
-@media only screen
-and (max-width: 768px) {
-  header .navbar-nav .active {
-    border-bottom: none;
-  }
+.btn {
+  border-radius: 0;
 }
-
-.view {
-    background-color: rgba(0,0,0,.5);
-}
-
-
 
 /*************** HOME PAGE ***************/
-article.homepage {
+article.page {
     padding: 50px 0 25px;
 }
 
-article.homepage p {
-    font-size: 1.15em;
+article.home {
+  padding: 20px 5px;
+  overflow:hidden;
 }
 
-article.homepage button {
-    margin-top: 10px;
-    margin-bottom: 25px;
+img.home-banner {
+  max-height: 200px;
+  margin: 0 auto;
+  border: 2px solid #DDD;
+  padding: 0;
 }
 
-section.home-navigation ul {
+p.main-info,p.secondary-info, div.main-pic-1, .main-pic-2 {
+  padding: 15px 20px;
+  margin: 13px 0 0 0;
+  border: 2px solid #DDD;
+}
+
+p.main-info, p.secondary-info {
+  width: 49%;
+  float: left;
+}
+
+.homepage p.main-info {
+  background: linear-gradient(to top, rgba(139, 114, 84, .9), rgba(183, 56, 106, .9));
+}
+
+.homepage p.secondary-info {
+  background: linear-gradient(to bottom, rgba(96, 118, 167, .9), rgba(40,50,100,.9));
+}
+
+div.main-pic-1 {
+  background: url("../img/projects.jpg") center center;
+  background-size: cover;
+  width: 49%;
+  margin-left: 2%;
+  float: left;
+}
+
+div.main-pic-2 {
+  background: url("../img/business-card.jpg") center center;
+  background-size: cover;
+  width: 49%;
+  margin-right: 2%;
+  float: left;
+  clear: both;
+}
+
+/*************** ABOUT PAGE ***************/
+
+article.about {
+  padding-top: 60px;
+  overflow: hidden;
+} 
+
+article.about-tab {
+  padding: 40px 0;
+}
+
+ .about ul {
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0,0,0,.4);
+}
+
+.about ul li a {
+  font-family: "Lato";
+  font-size: 1.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+}
+
+.about ul li a:hover, .about li a.activeTab {
+  background-color: #DDD;
+  color:black;
+}
+
+/* BIOGRAPHY */
+.biography-image {
+  height: 187px;
+  background: url("../img/biography.png") no-repeat top center;
+  background-size: cover;
+}
+
+article.bio-tab {
+  padding-top: 15px;
+}
+
+.profile-pic {
+  margin-bottom: 20px;
+}
+
+.bio {
+  margin: 0;
+  position: relative;
+  background-color: rgba(20,20,20,.9);
+  padding: 10px 5px;
+  border-top: 15px solid rgb(110,40,150);
+}
+
+.bio-image {
+  margin: 1% 0;
+}
+
+/* EDUCATION */
+
+.education {
+  overflow:hidden;
+}
+
+.education:first-child {
+  border-top: 15px solid rgb(110, 40, 150);
+}
+
+.education:nth-last-child(1) {
+  border-bottom: 15px solid rgb(110, 40, 150);
+}
+
+.education:nth-child(odd), .experience:nth-child(odd) {
+background-color: rgba(20,20,20,.9);
+}
+
+.education:nth-child(even), .experience:nth-child(even) {
+background-color: rgba(20,40,40,.9);
+}
+
+.education section h3, .experience h3 {
+  margin: 0 0 10px 0;
+  text-align: left;
+}
+
+.education img {
+  padding: 10px;
+  margin-top: 1%;
+}
+
+.education section, .experience {
+  padding: 20px 15px;
+}
+
+/* EXPERIENCE */
+
+.experience-photo {
+  height: 187px;
+  border-bottom: 5px solid rgba(255,255,215,.9);
+}
+
+/* TECH STACK */
+
+ul.tech-stack {
+  padding: 0;
+}
+
+.stack {
+  width: 48%;
+  margin: 0 1% 2%;
+  float: left;
+  background-color: rgba(0,0,0, .9);
+}
+
+.stack:hover {
+  outline: 4px solid #DDD;
+}
+
+.stack a img:hover {
+  opacity: 1;
+}
+
+.stack h4 {
+  background-color: rgba(255,255,255,.1);
+  padding: 10px 0;
+  color: #DDD;
+}
+
+.stack a img {
+  opacity: 0.6;
+  transition: all .4s ease-out;
+}
+
+div.overlay {
+  background: rgba(0,0,0, .7);
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  padding-top: 5%;
+}
+
+div.overlay img {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+div.overlay p {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+}
+
+/*************** CONTACT ***************/
+
+#contact {
+  padding: 60px 10px;
+  overflow: hidden;
+}
+
+.contact-description {
+  background: linear-gradient(to bottom, rgba(96, 118, 167, .7), rgba(40,50,100,.8));
+  border: 2px solid white;
+  padding: 20px 15px;
+}
+
+.contact-description h1 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-family: 'Dosis';
+}
+
+.contact-info {
+  margin-top: 1.5%;
+}
+
+.contact-info ul {
+  padding: 0;
+}
+
+.contact-info ul li {
+  position: relative;
+  display: block;
+  width: 49%;
+  float: left;
+  margin-bottom: 2%;
+  border: 2px solid white;
+}
+
+.contact-info ul li:nth-child(odd) {
+  margin-right: 1%;
+}
+
+.contact-info ul li:nth-child(even) {
+  margin-left: 1%;
+}
+
+.contact-info img {
+  width: 100%;
+}
+
+.contact-info ul li a {
+  color: white;
+}
+
+
+.contact-info ul li a p {
+  position: absolute;
+  bottom: -10px;
+  left: 0px;
+  width: 100%;
+  padding: 15px;
+  background-color: rgba(37, 44, 44, 0.7);
+  text-align: center;
+  transition: all .25s ease-out;
+}
+
+/*************** PORTFOLIO ***************/
+
+.portfolio {
+  padding: 60px 0;
+  margin: 0 10px;
+}
+
+.slide div.wrapper {
+  background-color: #000015;
+  margin: 0 5px;
+  border: 4px solid gray;
+}
+
+.port-image {
+  opacity: .4;
+}
+
+div.slick-center.slick-active {
+  border: 4px solid #DDD;
+}
+
+div.slick-center.slick-active img {
+  opacity: 1;
+}
+
+article.portfolio section.description {
+  background-color: rgba(155, 148, 211, .5);
+  background-size: cover;
+  border: 2px solid rgba(255,255,255, .6);
+  margin: 0 5px 30px;
+}
+
+article.portfolio section.description {
+  text-align: center;
+}
+
+div.port-bg {
+  position: relative;
+  background-color: rgba(0,0,0, .8);
+  margin: auto 0;
+  padding: 25px 15px;
+  min-height: 323px;
+}
+
+div.port-bg h3 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+div.port-bg p, section.contact-description p:first-of-type {
+  padding-top: 5px;
+  border-top: 1px solid #DDD;
+}
+
+div.port-bg a {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 2%;
+  background-color: rgba(185,128,31, 1);
+  color: white;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+div.port-bg a:hover {
+  background-color: #FACECE;
+}
+
+div.port-bg a span {
+  margin-left: 5px;
+}
+
+/*************** MEDIA QUERIES ***************/
+
+@media only screen and (max-width: 768px) {
+  header .navbar-nav .active {
+    border-bottom: none;
+  }
+  ul.nav {
+    margin-top: 50px;
+    background-color: rgba(0,0,0,.4);
+  }
+
+  .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover {
+    color: #002;
+    background-color: #EEE;
+  }
+
+  section.home-navigation ul li {
+      padding: 0;
+      border: 1px solid black;
+  }
+  section.home-navigation ul li a {
+    padding: 35px 0;
+  }
+  section.home-navigation ul li a div hr{
+    width: 60%;
+    margin: 0 auto;
+  }
+  p.main-info, p.secondary-info {
+    float: none;
+    width: 100%;
+    margin: 10px 0 0;
+  }
+
+  /* PORTFOLIO */
+  .slide div.slick-active {
+    border: 4px solid #DDD;
+  }
+
+  div.slick-active img {
+    opacity: 1;
+  }
+
+  .slick-dots {
+    bottom: 0;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  /* HOME */
+  article.homepage .content {
+      padding-top: 15px;
+      padding-bottom: 15px;
+  }
+  section.home-navigation  {
+      margin: 0 3%;
+  }
+  section.home-navigation ul li {
+      display: inline-block;
+      width: 45.7%;
+      margin: 1% 2%;
+  }
+  section.home-navigation ul li a {
+      height: 120px;
+      margin: 0 auto;
+      border-radius: 3px;
+      box-shadow: 5px 5px 2px 0px rgba(0, 0, 0, 0.4);
+      border: 4px solid #DDD;
+  }
+  section.home-navigation ul li a h3{
+      width: 60%;
+      margin: auto;
+  }
+  article.home {
+    margin: 0 1%;
+  }
+  div.main-pic-1, div.main-pic-2, p.main-info, p.secondary-info {
+    min-height: 336px;
+  }
+
+  /* ABOUT */
+  article.about {
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+  }
+
+  .education {
     padding: 0;
+  }
+
+  .education img {
+    float: left;
+    width: 20%;
+  }
+
+  .education section {
+    float: left;
+    width: 80%;
+  }
+
+  div.overlay img {
+    width: 75%;
+    margin-left:12.5%;
+    margin-right: 12.5%;
+  }
+
+  div.overlay p {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+    /* CONTACT */
+  #contact {
+    margin: 0 6%;
+  }
+
+  .contact-description {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  /* PORTFOLIO */
+  .portfolio {
+    margin: auto 5%;
+  }
+
+  div.port-bg {
+    min-height: 315px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 
-section.home-navigation ul li {
-    text-align: center;
-}
-
-section.home-navigation ul li a {
-    display: block;
-    padding: 50px 0;
-    color: white;
-    -webkit-transition: all 1s ease-out;
-    -o-transition: all 1s ease-out;
-    transition: all 1s ease-out;
-}
-
-section.home-navigation ul li a.resume {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/resume.jpg") center center;
-    background-size: cover;
-}
-
-section.home-navigation ul li a.about {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/about.jpg") center center;
-    background-size: cover;
-}
-
-section.home-navigation ul li a.contact {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/contact.jpg") center center;
-    background-size: cover;
-}
-
-section.home-navigation ul li a.projects {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/projects.jpg") center center;
-    background-size: cover;
-}
-
-section.home-navigation ul li a.resume:hover {
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../img/resume.jpg") center center;
-    background-size: cover;
-}
-
-
-@media only screen
-and (max-width: 768px) {
-    section.home-navigation ul li {
-        padding: 0;
-    }
-}
-
-@media only screen
-and (min-width: 768px) {
-    article.homepage .content {
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-    section.home-navigation  {
-        position: relative;
-    }
-    section.home-navigation ul li a {
-        max-width: 246px;
-        margin: 0 auto;
-        border-radius: 5px;
-        box-shadow: 5px 5px 2px 0px rgba(0, 0, 0, 0.4);
-        border: 4px solid white;
-    }
-}
-
-/*************** UNIVERSAL STYLES ***************/
-
-ul {
-    list-style: none
+@media only screen and (min-width: 860px) {
+  div.main-pic-1, div.main-pic-2, p.main-info, p.secondary-info {
+    min-height: 308px;
+  }
 }
 
 
+@media only screen and (min-width: 992px) {
+  /* HOME */
+  section.home-navigation ul li {
+    width: 22.72%;
+    margin: 0 1%;
+  }
+  article.home {
+    margin: 0 5.7%;
+  }
+
+  div.main-pic-1, div.main-pic-2, p.main-info, p.secondary-info {
+    min-height: 308px;
+  }
+
+  /* ABOUT */
+  article.about {
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+  section.education {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  article.experience-tab {
+    margin: 0 3%;
+  }
+
+  .stack {
+    width: 31.3%;
+  }
+
+  div.overlay img {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  div.overlay p {
+    margin-left: 13%;
+    margin-right: 13%;
+  }
+
+    /* CONTACT */
+  #contact {
+    margin: 0 14%;
+  }
+
+  .contact-info ul li {
+    width: 23.5%;
+  }
+
+  .contact-info ul li:first-of-type {
+    margin-right: 1%;
+  }
+
+  .contact-info ul li:last-of-type {
+    margin-left: 1%;
+  }
+
+  .contact-info ul li:nth-child(2),.contact-info ul li:nth-child(3) {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  /* PORTFOLIO */
+  .portfolio {
+    margin: auto 8%;
+  }
+  div.port-bg {
+    min-height: 300px;
+    padding-left: 9%;
+    padding-right: 9%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  div.main-pic-1, div.main-pic-2, p.main-info, p.secondary-info {
+    min-height: 280px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  div.main-pic-1, div.main-pic-2, p.main-info, p.secondary-info {
+    min-height: 250px;
+  }
+}
 
 
+@media only screen and (min-width: 1200px) {
+  /* HOME */
+  section.home-navigation  {
+      margin: 0 11%;
+  }
+  article.home {
+    margin: 0 11%;
+  }
 
+  div.main-pic-1, div.main-pic-2, p.main-info, p.secondary-info {
+    min-height: 280px;
+  }
 
+  /* ABOUT */
+  article.about {
+    margin-left: 12%;
+    margin-right: 12%;
+  }
 
+  section.education {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+  article.experience-tab {
+    margin: 0 5%;
+  }
 
+  div.overlay img {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
 
+  div.overlay p {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
 
+    /* CONTACT */
+  #contact {
+    margin: 0 20%;
+  }
 
+  /* PORTFOLIO */
+  .portfolio {
+    margin: auto 14%;
+  } 
 
+  div.port-bg {
+    padding-left: 14%;
+    padding-right: 14%;
+  }
+}
 
-
-
-
-
+@media only screen and (min-width: 1300px) {
+  div.main-pic-1, div.main-pic-2, p.main-info, p.secondary-info {
+    min-height: 250px;
+  }
+}
 
 /* ==========================================================================
    Helper classes

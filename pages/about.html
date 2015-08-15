@@ -1,0 +1,202 @@
+<article class="about" ng-init="tab=1">
+      <ul class="row">
+        <li><a ng-class="{activeTab:tab===1}" class="col-xs-6 col-sm-3" href ng-click="tab = 1">Biography</a></li>
+        <li><a ng-class="{activeTab:tab===2}" class="col-xs-6 col-sm-3" href ng-click="tab = 2">Education</a></li>
+        <li><a ng-class="{activeTab:tab===3}" class="col-xs-6 col-sm-3" href ng-click="tab = 3">Experience</a></li>
+        <li><a ng-class="{activeTab:tab===4}" class="col-xs-6 col-sm-3" href ng-click="tab = 4">Technology</a></li>
+      </ul>
+
+    <section ng-show="tab === 1">
+      <article class="about-tab bio-tab">
+        <section class="bio-image row">
+          <div class="biography-image"></div>
+        </section>
+        <section class="bio row">
+          <p class="col-md-6 text-justify">Graduated from the University of California, Santa Cruz, Justin Zhu began his work with non-profits to help the community around him. After years of working with the community, he developed and realized his passion for programming and web development. Justin spent years studying from an Object Oriented Language like Java to web-based language like Javascript. On Justin's free time, he continues to acquire new skills, design personal projects, and give back to the community.</p>
+          <p class="col-md-6 text-justify">Justin is a Front-End Developer who has created, built, and designed visually appealing sites for entrepreneurs and small local companies. While being skilled in the latest web technologies (HTML5, CSS3, and Javascript), Justin's strength lies in his "whatever it takes" attitude and burning passion to learn. He believes that technology is ever-evolving and maintenance of knowledge is an important aspect of keeping up with the latest trends.</p>
+        </section>
+      </article>
+    </section>
+
+    <section ng-show="tab === 2">
+      <article class="about-tab">
+        <section class="education">
+          <img class=" hidden-xs" src="img/ucsc_seal.svg" alt="ucsc logo"/>
+          <section>
+            <header>
+              <h3>University of California, Santa Cruz</h3>
+            </header>
+            <p class="text-justify">Justin Zhu received his Bachelor of Art degree in Spring 2008. During his studies at UCSC, Justin focused on communications, sciences, engineering, and history. He was also very involved in community organizing and was a core-member of several student organizations: Asian Pacific Islander Student Association (APISA), Chinese Student Association(CSA), and Community Unified Student Network (CUSN). </p>
+          </section>
+        </section> 
+        <section class="education">
+          <img class=" hidden-xs" src="img/lynda.jpg" alt="lynda.com logo"/>
+          <section>
+            <header>
+              <h3>Lynda.com</h3>
+            </header>
+            <p class="text-justify">From Twitter Bootstrap to AngularJS, Justin learned and acquired many advanced skills from modern web experts; subject and courses completed include: AJAX/JSON, Reponsive Web Design, jQuery UI animations, Object Oriented Java Programming, CSS for Developers, Git, and many others. Projects are created and completed to demonstrate level of mastery.</p>
+          </section>
+        </section> 
+        <section class="education">
+          <img class=" hidden-xs" src="img/udemy.png" alt="udemy logo"/>
+          <section>
+            <header>
+              <h3>Udemy</h3>
+            </header>
+            <p class="text-justify">Several courses were taken with professionals at Udemy; these courses include: Networking Fundamentals(Cisco CCENT), Computer Information Technology (COMPTIA A+), and learn and understand AngularJS. The course on Angular taught Justin the ability to create one-page responsive web applications that utilizes two-way binding and the use both a CSS &amp; JS Framework--Bootstrap with AngularJS.</p>
+          </section>
+        </section> 
+        <section class="education">
+          <img class=" hidden-xs" src="img/treehouse.png" alt="team treehouse logo"/>
+          <section>
+            <header>
+              <h3>Team Treehouse</h3>
+            </header>
+            <p class="text-justify">Under guidance of web professionals, Justin learned and created responsive single and multiple page applications. The use of modern web technologies: HTML5, CSS3, Javascript, was used in the creation and completition of projects while studying with treehouse experts. The projects included the use of jQuery for cross browser compatibility and aJAX for a dynamic web application.</p>
+          </section>
+        </section>
+        <section class="education">
+          <img class=" hidden-xs" src="img/ccsf.jpg" alt="city college of san francisco logo"/>
+          <section>
+            <header>
+              <h3>College College of San Francisco</h3>
+            </header>
+            <p class="text-justify">Courses in Cisco Computer Networking and Linux Administration were taken during the course of study at CCSF. Netorking projects consisted of work with servers, cisco networking routers and switches, and configuration. Linux projects required the use of command-line interfaces and Bash-shell scripting features.</p>
+          </section>
+        </section>
+      </article>
+    </section>
+
+    <section ng-show="tab === 3">
+      <article class="about-tab experience-tab">
+        <img class="img-responsive experience-photo" src="img/experience.jpg" alt="picture of home workspace"/>
+        <article class="experience">
+          <h3>Front-End Developer, Contractor (2015 - Current)</h3>
+          <section>
+            <p class="text-justify">Design visual and interactive web applications for small local companies and entrepreneurs. Implement the use of UX/UI interfaces to create a more interactive and modern user experience. Use the correct technologies for the application; this can include the use of CSS and Javascript frameworks such as: Twitter Bootstrap, Foundation, and AngularJS. Create quality mock-ups and prototypes on tight timelines while utilizing best W2C specification and practices. Provide website maintenance and enhancements for web applications.</p>
+          </section>
+        </article>
+        <article class="experience">
+          <h3>Community Health Outreach Worker, SFUSD (2/2009 – 6/2014)</h3>
+          <section>
+            <p class="text-justify">Provide outreach to both the school and the community at large to promote the Wellness Program and its services. This outreach includes promotion of the Wellness Program to students, school staff, parents, and Community-based Organizations (CBOs). Collaborates with a team of health professionals to offer health and wellness services to students such as assessments, treatment and referrals for reproductive health, physical health, mental health, and substance use concerns. Design and develop mid to large scale events for the community and assigned location.</p>
+          </section>
+        </article>
+      </article>
+    </section>
+
+    <section ng-show="tab === 4">
+      <article class="about-tab">
+        <ul class="tech-stack">
+          <li class="stack" ng-repeat="slide in slides" lightbox>
+            <a href="{{ slide.image }}">
+              <img class="img-responsive" src="{{ slide.image }}" alt="angular logo"/>
+              <h4 class="text-center">{{ slide.title }}</h4>
+            </a>
+          </li>
+        </ul>
+      </article>
+    </section>
+
+</article>
+
+
+
+
+<!-- <article class="about" id="about">
+    <tabset justified="true">
+      <tab heading="Biography">
+        <article class="about-tab bio-tab">
+          <section class="bio-image row">
+            <div class="biography-image"></div>
+          </section>
+          <section class="bio row">
+              <p class="col-md-6 text-justify">Graduated from the University of California, Santa Cruz, Justin Zhu began his work with non-profits to help the community around him. After years of working with the community, he developed and realized his passion for programming and web development. Justin spent years studying from an Object Oriented Language like Java to web-based language like Javascript. On Justin's free time, he continues to acquire new skills, design personal projects, and give back to the community.</p>
+              <p class="col-md-6 text-justify">Justin is a Front-End Developer who has created, built, and designed visually appealing sites for entrepreneurs and small local companies. While being skilled in the latest web technologies (HTML5, CSS3, and Javascript), Justin's strength lies in his "whatever it takes" attitude and burning passion to learn. He believes that technology is ever-evolving and maintenance of knowledge is an important aspect of keeping up with the latest trends.</p>
+          </section> row
+        </article>
+      </tab>
+
+      <tab heading="Education">
+        <article class="about-tab">
+          <article class="education">
+            <img class=" hidden-xs" src="img/ucsc_seal.svg" alt="ucsc logo"/>
+            <section>
+              <header>
+                <h3>University of California, Santa Cruz</h3>
+              </header>
+              <p class="text-justify">Justin Zhu received his Bachelor of Art degree in Spring 2008. During his studies at UCSC, Justin focused on communications, sciences, engineering, and history. He was also very involved in community organizing and was a core-member of several student organizations: Asian Pacific Islander Student Association (APISA), Chinese Student Association(CSA), and Community Unified Student Network (CUSN). </p>
+            </section>
+          </article> ucsc
+          <article class="education">
+            <img class=" hidden-xs" src="img/lynda.jpg" alt="lynda.com logo"/>
+            <section>
+              <header>
+                <h3>Lynda.com</h3>
+              </header>
+              <p class="text-justify">From Twitter Bootstrap to AngularJS, Justin learned and acquired many advanced skills from modern web experts; subject and courses completed include: AJAX/JSON, Reponsive Web Design, jQuery UI animations, Object Oriented Java Programming, CSS for Developers, Git, and many others. Projects are created and completed to demonstrate level of mastery.</p>
+            </section>
+          </article> lynda
+          <article class="education">
+            <img class=" hidden-xs" src="img/udemy.png" alt="udemy logo"/>
+            <section>
+              <header>
+                <h3>Udemy</h3>
+              </header>
+              <p class="text-justify">Several courses were taken with professionals at Udemy; these courses include: Networking Fundamentals(Cisco CCENT), Computer Information Technology (COMPTIA A+), and learn and understand AngularJS. The course on Angular taught Justin the ability to create one-page responsive web applications that utilizes two-way binding and the use both a CSS &amp; JS Framework--Bootstrap with AngularJS.</p>
+            </section>
+          </article> about-tab
+          <article class="education">
+            <img class=" hidden-xs" src="img/treehouse.png" alt="team treehouse logo"/>
+            <section>
+              <header>
+                <h3>Team Treehouse</h3>
+              </header>
+              <p class="text-justify">Under guidance of web professionals, Justin learned and created responsive single and multiple page applications. The use of modern web technologies: HTML5, CSS3, Javascript, was used in the creation and completition of projects while studying with treehouse experts. The projects included the use of jQuery for cross browser compatibility and aJAX for a dynamic web application.</p>
+            </section>
+          </article> about-tab
+          <article class="education">
+            <img class=" hidden-xs" src="img/ccsf.jpg" alt="city college of san francisco logo"/>
+            <section>
+              <header>
+                <h3>College College of San Francisco</h3>
+              </header>
+              <p class="text-justify">Courses in Cisco Computer Networking and Linux Administration were taken during the course of study at CCSF. Netorking projects consisted of work with servers, cisco networking routers and switches, and configuration. Linux projects required the use of command-line interfaces and Bash-shell scripting features.</p>
+            </section>
+          </article> about-tab
+        </article>
+      </tab>
+
+      <tab heading="Experience">
+        <article class="about-tab experience-tab">
+          <img class="img-responsive experience-photo" src="img/experience.jpg" alt="picture of home workspace"/>
+            <article class="experience">
+              <h3>Front-End Developer, Contractor (2015 - Current)</h3>
+              <section>
+                <p class="text-justify">Design visual and interactive web applications for small local companies and entrepreneurs. Implement the use of UX/UI interfaces to create a more interactive and modern user experience. Use the correct technologies for the application; this can include the use of CSS and Javascript frameworks such as: Twitter Bootstrap, Foundation, and AngularJS. Create quality mock-ups and prototypes on tight timelines while utilizing best W2C specification and practices. Provide website maintenance and enhancements for web applications.</p>
+              </section>
+            </article>
+            <article class="experience">
+              <h3>Community Health Outreach Worker, SFUSD (2/2009 – 6/2014)</h3>
+              <section>
+                <p class="text-justify">Provide outreach to both the school and the community at large to promote the Wellness Program and its services. This outreach includes promotion of the Wellness Program to students, school staff, parents, and Community-based Organizations (CBOs). Collaborates with a team of health professionals to offer health and wellness services to students such as assessments, treatment and referrals for reproductive health, physical health, mental health, and substance use concerns. Design and develop mid to large scale events for the community and assigned location.</p>
+              </section>
+            </article>
+        </article>
+      </tab>
+
+    <tab heading="Technology">
+      <article class="about-tab">
+        <ul class="tech-stack">
+          <li class="stack" ng-repeat="slide in slides" lightbox>
+            <a href="{{ slide.image }}">
+              <img class="img-responsive" src="{{ slide.image }}" alt="angular logo"/>
+              <h4 class="text-center">{{ slide.title }}</h4>
+            </a>
+          </li>
+        </ul>
+      </article>
+    </tab>
+  </tabset>
+</article> -->

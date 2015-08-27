@@ -99,6 +99,7 @@ textarea {
 /*************** GENERAL STYLES ***************/
 
 html, body {
+  width: 100%;
   height: 100%;
 }
 
@@ -108,11 +109,7 @@ body{
   font-size: 1.2em;
   position: relative;
   color: rgb(255,255,240);
-  background-image: url("../img/cinema.jpg");
-  background-position: top center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url("../img/cinema.jpg") top center no-repeat, #000000;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -135,9 +132,12 @@ ul {
     padding: 0;
 }
 
+
 /*************** MAIN PAGE ***************/
 div.view {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, .3);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 header.mainheader {
@@ -203,10 +203,6 @@ header section ul.nav li {
 }
 
 /*************** HOME PAGE ***************/
-article.page {
-    padding: 50px 0 25px;
-}
-
 article.home {
   padding: 20px 5px;
   overflow:hidden;
@@ -258,7 +254,6 @@ div.main-pic-2 {
 /*************** ABOUT PAGE ***************/
 
 article.about {
-  padding-top: 60px;
   overflow: hidden;
 } 
 
@@ -415,7 +410,7 @@ div.overlay p {
 /*************** CONTACT ***************/
 
 #contact {
-  padding: 60px 10px;
+  padding: 0 15px;
   overflow: hidden;
 }
 
@@ -479,7 +474,6 @@ div.overlay p {
 /*************** PORTFOLIO ***************/
 
 .portfolio {
-  padding: 60px 0;
   margin: 0 10px;
 }
 
@@ -548,6 +542,39 @@ div.port-bg a span {
   margin-left: 5px;
 }
 
+/*************** FOOTER  ***************/
+
+footer {
+  padding-top: 25px;
+  font-size: .9em;
+  overflow: hidden;
+  background-color: rgba(0,20,40,.4);
+}
+
+footer section, p.copyright {
+  padding: 0 15px;
+  margin-bottom: 25px;
+}
+
+.footer-nav ul li a, a.email {
+  padding: 0;
+  font-size: 1em;
+  text-decoration: underline;
+}
+
+.footer-nav ul li a, .email {
+  color: rgba(133,232,21,.8);
+}
+
+.footer-bio img {
+  margin-right: 15px;
+}
+
+.footer-nav ul li p {
+  margin-bottom: 0;
+}
+
+
 /*************** MEDIA QUERIES ***************/
 
 @media only screen and (max-width: 768px) {
@@ -593,7 +620,11 @@ div.port-bg a span {
   .slick-dots {
     bottom: 0;
   }
-
+  
+  /* FOOTER */
+  .footer-nav nav ul div li {
+    text-align: center;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -664,6 +695,24 @@ div.port-bg a span {
     margin: 0 6%;
   }
 
+  .contact-info ul li {
+    width: 23.5%;
+  }
+
+  .contact-info ul li:first-of-type {
+    margin-right: 1%;
+  }
+
+  .contact-info ul li:last-of-type {
+    margin-left: 1%;
+  }
+
+  .contact-info ul li:nth-child(2),.contact-info ul li:nth-child(3) {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+
   .contact-description {
     padding-left: 10%;
     padding-right: 10%;
@@ -678,6 +727,17 @@ div.port-bg a span {
     min-height: 315px;
     padding-left: 5%;
     padding-right: 5%;
+  }
+
+  /* PORTFOLIO */
+  footer {
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+  }
+
+  footer section {
+    width: 50%;
+    float: left;
   }
 }
 
@@ -735,22 +795,6 @@ div.port-bg a span {
     margin: 0 14%;
   }
 
-  .contact-info ul li {
-    width: 23.5%;
-  }
-
-  .contact-info ul li:first-of-type {
-    margin-right: 1%;
-  }
-
-  .contact-info ul li:last-of-type {
-    margin-left: 1%;
-  }
-
-  .contact-info ul li:nth-child(2),.contact-info ul li:nth-child(3) {
-    margin-left: 1%;
-    margin-right: 1%;
-  }
 
   /* PORTFOLIO */
   .portfolio {
@@ -760,6 +804,12 @@ div.port-bg a span {
     min-height: 300px;
     padding-left: 9%;
     padding-right: 9%;
+  }
+  
+  /* FOOTER */
+    footer {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 
@@ -827,6 +877,12 @@ div.port-bg a span {
   div.port-bg {
     padding-left: 14%;
     padding-right: 14%;
+  }
+
+  /* FOOTER */
+  footer {
+    padding-left: 15%;
+    padding-right: 15%;
   }
 }
 

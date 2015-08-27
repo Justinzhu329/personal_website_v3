@@ -1,0 +1,27 @@
+[
+  {
+    "photosrc": "img/ucsc_seal.svg",
+    "education": "University of California, Santa Cruz",
+    "description": "Justin Zhu received his Bachelor of Art degree in Spring 2008. During his studies at UCSC, Justin focused on communications, sciences, engineering, and history. He was also very involved in community organizing and was a core-member of several student organizations: Asian Pacific Islander Student Association (APISA), Chinese Student Association(CSA), and Community Unified Student Network (CUSN)."
+  },
+  {
+    "photosrc": "img/lynda.jpg",
+    "education": "Lynda.com",
+    "description": "From Twitter Bootstrap to AngularJS, Justin learned and acquired many advanced skills from modern web experts; subject and courses completed include: AJAX/JSON, Reponsive Web Design, jQuery UI animations, Object Oriented Java Programming, CSS for Developers, Git, and many others. Projects are created and completed to demonstrate level of mastery."
+  },
+  {
+    "photosrc": "img/udemy.png",
+    "education": "Udemy",
+    "description": "Several courses were taken with professionals at Udemy; these courses include: Networking Fundamentals(Cisco CCENT), Computer Information Technology (COMPTIA A+), and learn and understand AngularJS. The course on Angular taught Justin the ability to create one-page responsive web applications that utilizes two-way binding and the use both a CSS &amp; JS Framework--Bootstrap with AngularJS."
+  },
+  {
+    "photosrc": "img/treehouse.png",
+    "education": "Team Treehouse",
+    "description": "Under guidance of web professionals, Justin learned and created responsive single and multiple page applications. The use of modern web technologies: HTML5, CSS3, Javascript, was used in the creation and completition of projects while studying with treehouse experts. The projects included the use of jQuery for cross browser compatibility and aJAX for a dynamic web application."
+  },
+  {
+    "photosrc": "img/ccsf.jpg",
+    "education": "City College of San Francisco",
+    "description": "Courses in Cisco Computer Networking and Linux Administration were taken during the course of study at CCSF. Netorking projects consisted of work with servers, cisco networking routers and switches, and configuration. Linux projects required the use of command-line interfaces and Bash-shell scripting features."
+  }
+]

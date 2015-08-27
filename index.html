@@ -26,36 +26,68 @@
         <script src="js/angular-slick.min.js"></script>
         <script src="js/angularmodule.js"></script>
     </head>
-    <body ng-controller="mainController">
-        <div class="background">
-            <header id="mainheader" class="mainheader">
-              <nav class="main-navigation navbar navbar-inverse" role="navigation">
-                <article class="container">
+    <body ng-controller="mainController" resize>
+        <header id="mainheader" class="mainheader">
+          <nav class="main-navigation navbar navbar-inverse" role="navigation">
+            <article class="container">
 
-                    <button type="button" class="navbar-toggle" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+                <button type="button" class="navbar-toggle" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-                    <a href="" class="navbar-brand btn" ng-click="setRoute('home')"><h3>Justin Zhu<span class="subhead">Front-End Developer</span></h3></a>
-                  
-                    <section class="navbar-collapse" ng-class="{collapse: isCollapsed}">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li ng-class="{ active: isActive('/home') || isActive('/')}"><a class="btn" ng-click="setRoute('home')">Home</a></li>
-                            <li ng-class="{ active: isActive('/about')}"><a class="btn" ng-click="setRoute('about')">About</a></li>
-                            <li ng-class="{ active: isActive('/contact')}"><a class="btn" ng-click="setRoute('contact')">Contact</a></li>
-                            <li ng-class="{ active: isActive('/portfolio')}"><a class="btn" ng-click="setRoute('portfolio')">Portfolio</a></li>
-                        </ul>  <!-- .nav -->
-                    </section><!-- collapse navbar-collapse -->
+                <a href="" class="navbar-brand btn" ng-click="setRoute('home')"><h3>Justin Zhu<span class="subhead">Front-End Developer</span></h3></a>
+              
+                <section class="navbar-collapse" ng-class="{collapse: isCollapsed}">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li ng-class="{ active: isActive('/home') || isActive('/')}"><a class="btn" ng-click="setRoute('home')">Home</a></li>
+                        <li ng-class="{ active: isActive('/about')}"><a class="btn" ng-click="setRoute('about')">About</a></li>
+                        <li ng-class="{ active: isActive('/contact')}"><a class="btn" ng-click="setRoute('contact')">Contact</a></li>
+                        <li ng-class="{ active: isActive('/portfolio')}"><a class="btn" ng-click="setRoute('portfolio')">Portfolio</a></li>
+                    </ul>  <!-- .nav -->
+                </section><!-- collapse navbar-collapse -->
 
-                </article><!-- container -->
-              </nav> <!-- nav -->
-            </header>
+            </article><!-- container -->
+          </nav> <!-- nav -->
+        </header>
 
-            <div class="view" ng-view></div>
-        </div> <!-- background -->
-    <div class="overlay"><img src="" alt=""><p class="text-justify"></p></div>
+        <div class="calculateheight"><div class="view" ng-view></div></div>
+
+        <footer>
+            <section class="footer-bio">
+                <img class="pull-left" src="img/justin.jpg" alt="image of justin">
+                <p class="text-justify"> Graduate from University of California, Santa Cruz, Justin is a Front End Developer with over two years of experience in CSS3, HTML5, JavaScript, MVC frameworks, Responsive Design, and more.
+                <p class="text-center">Available August 2015. <a class="email" href="mailto:justinzhu329@gmail.com">Hire Now <span class="glyphicon glyphicon-hand-right"></span></a></p>
+            </section>
+
+            <section class="footer-nav">
+                <nav>
+                    <ul>
+                        <div class="row">
+                            <li class="col-xs-4 col-sm-12">
+                                <a class="btn" ng-click="setRoute('about')">About</a>
+                                <p class="hidden-xs">Learn more about Justin's technical skills and background.</p>
+                            </li>
+                            <li class="col-xs-4 col-sm-12">
+                                <a class="btn" ng-click="setRoute('contact')">Contact</a>
+                                <p class="hidden-xs">Send an email, contact through the phone or social media.</p>
+                            </li>
+                            <li class="col-xs-4 col-sm-12">
+                                <a class="btn" ng-click="setRoute('portfolio')">Portfolio</a>
+                                <p class="hidden-xs">View sample front end development work and projects.</p>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>    
+            </section>
+
+            <div class="clearfix visible-sn-block"></div>
+            <p class="text-center copyright">Unless otherwise stated, content displayed are only for demonstration purposes and all rights reserved to the creator of the used images.</p>
+                </div>
+        </footer>
+
+        <div class="overlay"><img src="" alt=""><p class="text-justify"></p></div>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

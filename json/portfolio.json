@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Badminton World",
+    "shortname": "badmintonworld",
+    "description": "Fully responsive website application built on Twitter's Bootstrap 3. Features include: Carousel for image rotation, Navigation Animation, One-Page Responsive design, and Accordion. Uses scaleable vector grahpics (svg) files for small icons and Bootstrap's grid system for responsive design."
+  },
+  {
+    "title": "Memory Game: Brain Teaser",
+    "shortname": "brainteaser",
+    "description": "Mini browser game created with HTML5, CSS3, and jQuery. Features four difficulties and background HTML audio. Utilizes jQuery UI for animation effects and new CSS features like transform, transition, and backface for card rotation effects."
+  },
+  {
+    "title": "Flickr Search",
+    "shortname": "flickrsearch",
+    "description": "Small web application built to specially work with Flickr\\'s API service. Application utilizes aJAX and Javascript to send and receive information from Flickr. The JSON file received is then parsed with HTML markup and CSS to provide visual asethics."
+  },
+  {
+    "title": "Pet Wisdom",
+    "shortname": "petwisdom",
+    "description": "Responsive web application built with Bootstrap 3. Features a resizeable full-screen carousel using Scrollspy from Boostrap. Grids and Glyph-icons were used to create a responsive visually appealing interface. CSS absolute and relative positions are used for element overlays."
+  }
+]
